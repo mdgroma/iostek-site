@@ -31,12 +31,37 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; }
     h1,h2,h3,.font-sora { font-family: 'Sora', sans-serif; }
-    .grid-bg {
-      background-image:
-        radial-gradient(60% 50% at 50% 0%, rgba(31,111,235,0.22), transparent 70%),
-        linear-gradient(to bottom, #0A1020, #0A1020);
-    }
     .ring-card { box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 24px 60px rgba(8,15,35,0.06); }
+
+    /* Sfondo scuro "premium": aurora glow + griglia blueprint a puntini */
+    .hero-dark {
+      background-color: #0A1020;
+      background-image:
+        radial-gradient(50% 40% at 18% 0%, rgba(59,141,240,0.28), transparent 70%),
+        radial-gradient(45% 45% at 90% 25%, rgba(31,111,235,0.22), transparent 70%);
+    }
+    .dotgrid {
+      background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 26px 26px;
+      mask-image: linear-gradient(to bottom, black, transparent 92%);
+    }
+    .aurora { filter: blur(60px); animation: float 14s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translate3d(0,0,0)} 50%{transform:translate3d(0,-24px,0)} }
+
+    /* Node-graph: nodi pulsanti + archi che "scorrono" (concetto AI agentica) */
+    .node { animation: pulse 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes pulse { 0%,100%{opacity:.55} 50%{opacity:1} }
+    .edge { stroke-dasharray: 5 7; animation: dash 2.6s linear infinite; }
+    @keyframes dash { to { stroke-dashoffset: -120; } }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .aurora,.node,.edge { animation: none; }
+      .reveal { opacity: 1; transform: none; }
+    }
   </style>
 </head>
 
@@ -50,44 +75,85 @@
         <span class="h-1.5 w-1.5 rounded-full bg-accent2"></span>
       </a>
       <nav class="hidden items-center gap-7 text-sm font-medium text-slate-300 md:flex">
-        <a href="#servizi" class="hover:text-white transition-colors">Servizi</a>
+        <a href="servizi.html" class="hover:text-white transition-colors">Servizi</a>
         <a href="#ai" class="hover:text-white transition-colors">AI in azienda</a>
         <a href="#esperienza" class="hover:text-white transition-colors">Esperienza</a>
         <a href="#mandascan" class="hover:text-white transition-colors">Prodotti</a>
+        <a href="contatti.html" class="hover:text-white transition-colors">Contatti</a>
       </nav>
-      <a href="#contatti" class="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90">
+      <a href="contatti.html" class="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90">
         Parliamone
       </a>
     </div>
   </header>
 
   <!-- HERO -->
-  <section id="top" class="grid-bg relative overflow-hidden text-white">
-    <div class="mx-auto max-w-6xl px-6 py-24 lg:py-32">
-      <p class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
-        <span class="h-1.5 w-1.5 rounded-full bg-accent2"></span>
-        Studio di consulenza software &amp; IT · dal 1989
-      </p>
-      <h1 class="mt-6 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-        Software su misura e <span class="text-accent2">automazione AI</span> per la tua azienda.
-      </h1>
-      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
-        Progettiamo e costruiamo software, gestiamo infrastrutture IT e portiamo
-        l'intelligenza artificiale <strong class="text-white">dentro</strong> la tua azienda:
-        individuiamo i processi da automatizzare e installiamo agenti AI su misura,
-        integrati coi tuoi sistemi e con i tuoi dati che restano tuoi.
-      </p>
-      <div class="mt-9 flex flex-wrap items-center gap-3">
-        <a href="#contatti" class="rounded-xl bg-accent px-6 py-3.5 text-base font-semibold text-white shadow-[0_10px_30px_rgba(31,111,235,0.4)] transition-transform hover:scale-[1.02]">
-          Parliamo del tuo progetto
-        </a>
-        <a href="#ai" class="rounded-xl border border-white/20 px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10">
-          Metti una tua AI in casa →
-        </a>
+  <section id="top" class="hero-dark relative overflow-hidden text-white">
+    <div class="absolute inset-0 dotgrid"></div>
+    <div class="aurora pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-accent/30"></div>
+    <div class="aurora pointer-events-none absolute right-0 top-40 h-80 w-80 rounded-full bg-accent2/20" style="animation-delay:-6s"></div>
+
+    <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:py-28">
+      <div>
+        <p class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
+          <span class="h-1.5 w-1.5 rounded-full bg-accent2"></span>
+          Studio di consulenza software &amp; IT · dal 1989
+        </p>
+        <h1 class="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+          Software su misura e <span class="text-accent2">automazione AI</span> per la tua azienda.
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
+          Progettiamo e costruiamo software, gestiamo infrastrutture IT e portiamo
+          l'intelligenza artificiale <strong class="text-white">dentro</strong> la tua azienda:
+          individuiamo i processi da automatizzare e installiamo agenti AI su misura,
+          integrati coi tuoi sistemi e con i tuoi dati che restano tuoi.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-3">
+          <a href="contatti.html" class="rounded-xl bg-accent px-6 py-3.5 text-base font-semibold text-white shadow-[0_10px_30px_rgba(31,111,235,0.4)] transition-transform hover:scale-[1.02]">
+            Parliamo del tuo progetto
+          </a>
+          <a href="#ai" class="rounded-xl border border-white/20 px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10">
+            Metti una tua AI in casa →
+          </a>
+        </div>
+        <p class="mt-8 text-sm text-slate-400">
+          35 anni di esperienza · Italia · UK · Silicon Valley — enterprise, banking, mobile.
+        </p>
       </div>
-      <p class="mt-8 text-sm text-slate-400">
-        35 anni di esperienza · Italia · UK · Silicon Valley — enterprise, banking, mobile.
-      </p>
+
+      <!-- Node-graph: infrastruttura agentica AI -->
+      <div class="relative hidden lg:block">
+        <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-sm">
+          <svg viewBox="0 0 420 360" class="w-full" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- archi -->
+            <g class="edge" stroke="#3B8DF0" stroke-width="1.6" opacity="0.7">
+              <path d="M210 180 L80 70"/><path d="M210 180 L350 70"/>
+              <path d="M210 180 L60 250"/><path d="M210 180 L360 250"/>
+              <path d="M210 180 L210 320"/>
+              <path d="M80 70 L350 70"/><path d="M60 250 L360 250"/>
+            </g>
+            <!-- nodi periferici -->
+            <g>
+              <circle class="node" cx="80"  cy="70"  r="9"  fill="#3B8DF0"/>
+              <circle class="node" cx="350" cy="70"  r="9"  fill="#3B8DF0" style="animation-delay:-.6s"/>
+              <circle class="node" cx="60"  cy="250" r="9"  fill="#3B8DF0" style="animation-delay:-1.2s"/>
+              <circle class="node" cx="360" cy="250" r="9"  fill="#3B8DF0" style="animation-delay:-1.8s"/>
+              <circle class="node" cx="210" cy="320" r="9"  fill="#3B8DF0" style="animation-delay:-2.4s"/>
+            </g>
+            <!-- nodo centrale (la "tua AI") -->
+            <circle cx="210" cy="180" r="34" fill="#1F6FEB" opacity="0.18"/>
+            <circle cx="210" cy="180" r="22" fill="#1F6FEB"/>
+            <text x="210" y="184" text-anchor="middle" font-family="Sora" font-size="11" font-weight="700" fill="#fff">AI</text>
+            <!-- etichette -->
+            <text x="80"  y="50"  text-anchor="middle" font-family="Inter" font-size="10" fill="#9fb3d1">Gestionale</text>
+            <text x="350" y="50"  text-anchor="middle" font-family="Inter" font-size="10" fill="#9fb3d1">Email</text>
+            <text x="60"  y="276" text-anchor="middle" font-family="Inter" font-size="10" fill="#9fb3d1">Documenti</text>
+            <text x="360" y="276" text-anchor="middle" font-family="Inter" font-size="10" fill="#9fb3d1">Database</text>
+            <text x="210" y="344" text-anchor="middle" font-family="Inter" font-size="10" fill="#9fb3d1">CRM</text>
+          </svg>
+          <p class="px-2 pb-1 text-center text-xs text-slate-400">Una tua AI, collegata ai sistemi che usi ogni giorno.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -231,6 +297,16 @@
     <div class="mx-auto max-w-6xl px-6 py-24">
       <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
+          <div class="mb-6 flex items-center gap-4">
+            <div class="relative h-16 w-16 overflow-hidden rounded-2xl bg-accent/10 ring-1 ring-slate-200">
+              <div class="flex h-full w-full items-center justify-center text-lg font-bold text-accent font-sora">MDG</div>
+              <img src="assets/marco.jpg" alt="Marco De Girolamo" class="absolute inset-0 h-full w-full object-cover" onerror="this.remove()" />
+            </div>
+            <div>
+              <div class="font-bold">Marco De Girolamo</div>
+              <div class="text-sm text-slate-500">Founder · Senior Software Engineer</div>
+            </div>
+          </div>
           <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
             Dal mainframe bancario alla Silicon Valley. Oggi, al servizio della tua impresa.
           </h2>
@@ -293,20 +369,26 @@
           <p class="mt-5 text-lg leading-relaxed text-slate-600">
             <strong>Mandascan</strong> è la nostra piattaforma per studi professionali:
             raccoglie i documenti dei clienti a distanza, li fa firmare con valore legale
-            e li organizza in fascicoli cifrati. App iOS e Android più dashboard web,
-            con pagamenti, automazioni e infrastruttura self-hosted. La prova concreta
-            di cosa sappiamo mettere in produzione.
+            e li organizza in fascicoli cifrati. La prova concreta di cosa sappiamo
+            mettere in produzione.
           </p>
+          <div class="mt-6 space-y-3 text-sm text-slate-600">
+            <div class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"></span><span><strong class="text-ink">Full-stack reale:</strong> app mobile native, dashboard Next.js, backend, pagamenti e storage cifrato.</span></div>
+            <div class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"></span><span><strong class="text-ink">Infrastruttura self-hosted</strong> con sicurezza e continuità gestite end-to-end.</span></div>
+            <div class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"></span><span><strong class="text-ink">Automazioni</strong> che tolgono il lavoro ripetitivo — la stessa filosofia che portiamo nella tua azienda.</span></div>
+          </div>
           <a href="https://mandascan.com" rel="noopener" class="mt-7 inline-flex items-center gap-2 rounded-xl border border-accent/30 px-6 py-3.5 text-base font-semibold text-accent transition-colors hover:bg-accent/5">
             Scopri Mandascan →
           </a>
         </div>
-        <div class="rounded-3xl bg-white p-8 ring-card">
-          <div class="space-y-4 text-sm text-slate-600">
-            <div class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"></span><span><strong class="text-ink">Full-stack reale:</strong> app mobile native, dashboard Next.js, backend, pagamenti e storage cifrato.</span></div>
-            <div class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"></span><span><strong class="text-ink">Infrastruttura self-hosted</strong> con sicurezza e continuità gestite end-to-end.</span></div>
-            <div class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"></span><span><strong class="text-ink">Automazioni</strong> che tolgono il lavoro ripetitivo agli studi — la stessa filosofia che portiamo nella tua azienda.</span></div>
+        <div class="overflow-hidden rounded-3xl bg-white ring-card">
+          <div class="flex items-center gap-1.5 border-b border-slate-100 px-4 py-3">
+            <span class="h-2.5 w-2.5 rounded-full bg-rose-300"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-amber-300"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-emerald-300"></span>
+            <span class="ml-3 text-xs text-slate-400">mandascan.com</span>
           </div>
+          <img src="assets/mandascan-dashboard.png" alt="Dashboard di Mandascan Studio" class="w-full" loading="lazy" />
         </div>
       </div>
     </div>
@@ -347,5 +429,17 @@
     </div>
   </footer>
 
+  <script>
+    // Scroll-reveal: aggiunge .reveal via JS (senza JS nulla resta nascosto)
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('section h2, .ring-card, [data-reveal]').forEach((el) => {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  </script>
 </body>
 </html>

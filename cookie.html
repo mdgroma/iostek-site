@@ -6,17 +6,17 @@
   <title>Cookie Policy — iOStek</title>
   <meta name="robots" content="noindex" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = { theme: { extend: {
-      fontFamily: { display: ['Fraunces','serif'], sans: ['Manrope','sans-serif'], mono: ['"JetBrains Mono"','monospace'] },
+      fontFamily: { display: ['"Space Grotesk"','sans-serif'], sans: ['Manrope','sans-serif'], mono: ['"JetBrains Mono"','monospace'] },
       colors: { ink: '#1A1813', paper: '#FBFAF6', accent: '#2A43E8', accent2: '#5E74FF' },
     }}};
   </script>
   <style>
     body { font-family: 'Manrope', sans-serif; background:#FBFAF6; }
-    h1,h2,h3,.font-display { font-family: 'Fraunces', serif; letter-spacing:-0.01em; }
-    .prose h2 { font-size:1.3rem; font-weight:600; margin-top:2rem; margin-bottom:.5rem; font-family:'Fraunces',serif; }
+    h1,h2,h3,.font-display { font-family: 'Space Grotesk', sans-serif; letter-spacing:-0.02em; }
+    .prose h2 { font-size:1.25rem; font-weight:600; margin-top:2rem; margin-bottom:.5rem; font-family:'Space Grotesk',sans-serif; letter-spacing:-0.02em; }
     .prose p, .prose li { color:#4a463d; line-height:1.7; }
     .prose ul { list-style: disc; padding-left:1.25rem; margin:.5rem 0; }
     .prose a { color:#2A43E8; text-decoration: underline; }
@@ -29,7 +29,10 @@
 
   <header class="border-b border-ink/5 bg-paper/80 backdrop-blur-lg">
     <div class="mx-auto flex h-16 max-w-4xl items-center justify-between px-6">
-      <a href="index.html" class="text-xl font-bold tracking-tight font-display">iOStek<span class="text-accent">.</span></a>
+      <a href="index.html" class="flex items-center gap-2.5">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="url(#lg1)"/><path d="M16 6.4 L18.3 13.7 L25.6 16 L18.3 18.3 L16 25.6 L13.7 18.3 L6.4 16 L13.7 13.7 Z" fill="#fff"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2A43E8"/><stop offset="1" stop-color="#5E74FF"/></linearGradient></defs></svg>
+        <span class="text-xl font-bold tracking-tight font-display">iOStek</span>
+      </a>
       <a href="index.html" class="text-sm font-medium text-stone-500 hover:text-ink">← Home</a>
     </div>
   </header>

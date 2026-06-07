@@ -8,16 +8,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = { theme: { extend: {
-      fontFamily: { display: ['Fraunces','serif'], sans: ['Manrope','sans-serif'], mono: ['"JetBrains Mono"','monospace'] },
+      fontFamily: { display: ['"Space Grotesk"','sans-serif'], sans: ['Manrope','sans-serif'], mono: ['"JetBrains Mono"','monospace'] },
       colors: { ink: '#1A1813', paper: '#FBFAF6', accent: '#2A43E8', accent2: '#5E74FF' },
     }}};
   </script>
   <style>
     html { scroll-behavior: smooth; } body { font-family: 'Manrope', sans-serif; background:#FBFAF6; }
-    h1,h2,h3,.font-display { font-family: 'Fraunces', serif; letter-spacing:-0.01em; }
+    h1,h2,h3,.font-display { font-family: 'Space Grotesk', sans-serif; letter-spacing:-0.02em; }
     .eyebrow { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.22em; text-transform:uppercase; }
     .ring-card { box-shadow: 0 1px 2px rgba(26,24,19,.04), 0 18px 50px rgba(26,24,19,.06); }
     .glow-paper { background-color:#FBFAF6; background-image:
@@ -33,7 +33,10 @@
 
   <header class="sticky top-0 z-50 border-b border-ink/5 bg-paper/80 backdrop-blur-lg">
     <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-      <a href="index.html" class="text-xl font-bold tracking-tight font-display">iOStek<span class="text-accent">.</span></a>
+      <a href="index.html" class="flex items-center gap-2.5">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="url(#lg1)"/><path d="M16 6.4 L18.3 13.7 L25.6 16 L18.3 18.3 L16 25.6 L13.7 18.3 L6.4 16 L13.7 13.7 Z" fill="#fff"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2A43E8"/><stop offset="1" stop-color="#5E74FF"/></linearGradient></defs></svg>
+        <span class="text-xl font-bold tracking-tight font-display">iOStek</span>
+      </a>
       <nav class="hidden items-center gap-8 text-sm font-medium text-stone-500 md:flex">
         <a href="servizi.html" class="text-ink">Servizi</a>
         <a href="index.html#ai" class="hover:text-ink transition-colors">AI in azienda</a>
@@ -50,7 +53,7 @@
     <div class="relative mx-auto max-w-6xl px-6 py-20">
       <p class="eyebrow text-accent">Servizi</p>
       <h1 class="mt-3 max-w-3xl text-[2.6rem] font-semibold leading-[1.04] tracking-tight sm:text-6xl">
-        Progettiamo, costruiamo, <span class="italic text-accent">integriamo</span> e manteniamo.
+        Progettiamo, costruiamo, <span class="text-accent">integriamo</span> e manteniamo.
       </h1>
       <p class="mt-5 max-w-2xl text-lg leading-relaxed text-stone-600">
         Un partner tecnico unico per il software della tua azienda — dall'idea alla
@@ -147,7 +150,10 @@
     <div class="mx-auto max-w-6xl border-t border-ink/10 px-6 py-12">
       <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <div>
-          <div class="text-lg font-bold font-display">iOStek<span class="text-accent">.</span></div>
+          <div class="flex items-center gap-2.5">
+            <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="url(#lg2)"/><path d="M16 6.4 L18.3 13.7 L25.6 16 L18.3 18.3 L16 25.6 L13.7 18.3 L6.4 16 L13.7 13.7 Z" fill="#fff"/><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2A43E8"/><stop offset="1" stop-color="#5E74FF"/></linearGradient></defs></svg>
+            <span class="text-lg font-bold font-display">iOStek</span>
+          </div>
           <p class="mt-1 text-sm text-stone-500">Studio di consulenza software &amp; IT — di Marco De Girolamo</p>
         </div>
         <div class="text-sm text-stone-500"><div>marco@iostek.com</div><div class="mt-1">P.IVA 10552601006</div></div>

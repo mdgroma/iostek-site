@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iOStek — Software su misura e automazione AI per le aziende</title>
+  <meta name="description" content="Studio di consulenza software e IT. Progettiamo software su misura, gestiamo infrastrutture e portiamo l'automazione AI dentro la tua azienda — la tua AI, sui tuoi dati. 35 anni di esperienza tra Italia, UK e Silicon Valley." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sora: ['Sora', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            ink: '#0A1020',
+            accent: '#1F6FEB',
+            accent2: '#3B8DF0',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    h1,h2,h3,.font-sora { font-family: 'Sora', sans-serif; }
+    .grid-bg {
+      background-image:
+        radial-gradient(60% 50% at 50% 0%, rgba(31,111,235,0.22), transparent 70%),
+        linear-gradient(to bottom, #0A1020, #0A1020);
+    }
+    .ring-card { box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 24px 60px rgba(8,15,35,0.06); }
+  </style>
+</head>
+
+<body class="bg-white text-ink antialiased">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-ink/85 backdrop-blur-lg">
+    <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <a href="#top" class="flex items-center gap-2 text-xl font-extrabold tracking-tight text-white font-sora">
+        <span>iOS<span class="text-accent2">tek</span></span>
+        <span class="h-1.5 w-1.5 rounded-full bg-accent2"></span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-slate-300 md:flex">
+        <a href="#servizi" class="hover:text-white transition-colors">Servizi</a>
+        <a href="#ai" class="hover:text-white transition-colors">AI in azienda</a>
+        <a href="#esperienza" class="hover:text-white transition-colors">Esperienza</a>
+        <a href="#mandascan" class="hover:text-white transition-colors">Prodotti</a>
+      </nav>
+      <a href="#contatti" class="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90">
+        Parliamone
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="grid-bg relative overflow-hidden text-white">
+    <div class="mx-auto max-w-6xl px-6 py-24 lg:py-32">
+      <p class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
+        <span class="h-1.5 w-1.5 rounded-full bg-accent2"></span>
+        Studio di consulenza software &amp; IT · dal 1989
+      </p>
+      <h1 class="mt-6 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+        Software su misura e <span class="text-accent2">automazione AI</span> per la tua azienda.
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+        Progettiamo e costruiamo software, gestiamo infrastrutture IT e portiamo
+        l'intelligenza artificiale <strong class="text-white">dentro</strong> la tua azienda:
+        individuiamo i processi da automatizzare e installiamo agenti AI su misura,
+        integrati coi tuoi sistemi e con i tuoi dati che restano tuoi.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center gap-3">
+        <a href="#contatti" class="rounded-xl bg-accent px-6 py-3.5 text-base font-semibold text-white shadow-[0_10px_30px_rgba(31,111,235,0.4)] transition-transform hover:scale-[1.02]">
+          Parliamo del tuo progetto
+        </a>
+        <a href="#ai" class="rounded-xl border border-white/20 px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10">
+          Metti una tua AI in casa →
+        </a>
+      </div>
+      <p class="mt-8 text-sm text-slate-400">
+        35 anni di esperienza · Italia · UK · Silicon Valley — enterprise, banking, mobile.
+      </p>
+    </div>
+  </section>
+
+  <!-- CREDIBILITY STRIP -->
+  <section class="border-y border-slate-100 bg-[#f6f8fb]">
+    <div class="mx-auto max-w-6xl px-6 py-10">
+      <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+        Esperienza maturata su progetti e piattaforme per
+      </p>
+      <div class="mt-5 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-semibold text-slate-400">
+        <span>Kering</span><span>Luxottica</span><span>Safilo</span><span>Gruppo Gucci</span>
+        <span>Fastweb</span><span>Telecom Italia</span><span>Alitalia</span>
+        <span>Banca Generali</span><span>BancaIMI</span><span>Mobank · UK</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI -->
+  <section id="servizi" class="bg-white">
+    <div class="mx-auto max-w-6xl px-6 py-24">
+      <h2 class="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">
+        Quattro cose che facciamo bene, da molto tempo.
+      </h2>
+      <p class="mt-4 max-w-2xl text-lg text-slate-600">
+        Non un'agenzia generalista. Un partner tecnico senior che progetta,
+        costruisce e manda in produzione — e poi rimane a mantenerlo.
+      </p>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        <!-- 1 -->
+        <div class="ring-card rounded-3xl border border-slate-100 p-8">
+          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-accent">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3 class="mt-5 text-xl font-bold">Software su misura</h3>
+          <p class="mt-2 leading-relaxed text-slate-600">
+            App mobile iOS e Android (nativo e cross-platform), piattaforme SaaS,
+            gestionali web e portali. Dalla progettazione dell'architettura al
+            deployment in produzione.
+          </p>
+          <p class="mt-4 text-sm font-medium text-slate-500">Swift · SwiftUI · Flutter · Next.js · backend &amp; API</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="ring-card rounded-3xl border border-accent/20 bg-gradient-to-br from-accent/[0.04] to-transparent p-8">
+          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent text-white">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="mt-5 text-xl font-bold">Automazione AI &amp; agenti <span class="ml-1 align-middle text-xs font-semibold text-accent">— il cuore</span></h3>
+          <p class="mt-2 leading-relaxed text-slate-600">
+            Individuiamo i processi della tua azienda che l'AI può automatizzare e
+            costruiamo infrastrutture agentiche su misura — on-premise o private cloud.
+            La tua AI, sui tuoi dati, integrata coi tuoi sistemi.
+          </p>
+          <p class="mt-4 text-sm font-medium text-accent">Una tua AI in casa, non un abbonamento a una scatola nera.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="ring-card rounded-3xl border border-slate-100 p-8">
+          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-accent">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="6" rx="1"/><rect x="2" y="9" width="20" height="6" rx="1"/><path d="M6 6h.01M6 12h.01"/></svg>
+          </div>
+          <h3 class="mt-5 text-xl font-bold">Infrastrutture IT</h3>
+          <p class="mt-2 leading-relaxed text-slate-600">
+            Progettazione, installazione, gestione e manutenzione. Cloud, ibrido o
+            on-premise: alta affidabilità, failover, backup, sicurezza e continuità
+            operativa. Le teniamo in piedi noi.
+          </p>
+          <p class="mt-4 text-sm font-medium text-slate-500">AWS · Azure · Hetzner · VMware · Linux · firewall &amp; sicurezza</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="ring-card rounded-3xl border border-slate-100 p-8">
+          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-accent">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6a3 3 0 0 1 3 3v6M6 9v6a3 3 0 0 0 3 3h6"/></svg>
+          </div>
+          <h3 class="mt-5 text-xl font-bold">Integrazione enterprise (EAI/BPM)</h3>
+          <p class="mt-2 leading-relaxed text-slate-600">
+            Far parlare i sistemi che oggi non si parlano: ERP, CRM, database, gateway
+            di messaggistica. Oltre vent'anni su middleware di integrazione e processi
+            enterprise, anche in ambito bancario e finanziario.
+          </p>
+          <p class="mt-4 text-sm font-medium text-slate-500">EAI/BPM · ERP/CRM · SWIFT/FIN · ORACLE · DB2 · SQL Server</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI DEEP DIVE -->
+  <section id="ai" class="bg-ink text-white">
+    <div class="mx-auto max-w-6xl px-6 py-24">
+      <p class="text-sm font-semibold uppercase tracking-wider text-accent2">Automazione AI</p>
+      <h2 class="mt-3 max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
+        L'AI non è un chatbot da comprare. È un sistema da progettare intorno alla tua azienda.
+      </h2>
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-300">
+        La maggior parte delle aziende compra abbonamenti AI e li usa al 10%, mandando
+        i propri dati su servizi di terzi. Noi facciamo il contrario: studiamo i tuoi
+        processi, progettiamo gli agenti che ti servono davvero e li installiamo a casa
+        tua — collegati ai tuoi gestionali, alle tue mail, ai tuoi documenti.
+      </p>
+
+      <div class="mt-14 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-5">
+        <div class="bg-ink p-7">
+          <div class="text-2xl font-extrabold text-accent2 font-sora">01</div>
+          <h3 class="mt-3 font-bold">Audit dei processi</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-400">Guardiamo come lavori e troviamo dove l'AI fa risparmiare tempo e soldi davvero.</p>
+        </div>
+        <div class="bg-ink p-7">
+          <div class="text-2xl font-extrabold text-accent2 font-sora">02</div>
+          <h3 class="mt-3 font-bold">Design dell'infrastruttura</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-400">Agenti su misura, non template. Architettura pensata sui tuoi sistemi e i tuoi vincoli.</p>
+        </div>
+        <div class="bg-ink p-7">
+          <div class="text-2xl font-extrabold text-accent2 font-sora">03</div>
+          <h3 class="mt-3 font-bold">Installazione &amp; config</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-400">On-premise o private cloud. I tuoi dati restano dentro la tua azienda.</p>
+        </div>
+        <div class="bg-ink p-7">
+          <div class="text-2xl font-extrabold text-accent2 font-sora">04</div>
+          <h3 class="mt-3 font-bold">Integrazione</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-400">Collegata a gestionali, posta, documenti e database. L'AI lavora dove lavori tu.</p>
+        </div>
+        <div class="bg-ink p-7">
+          <div class="text-2xl font-extrabold text-accent2 font-sora">05</div>
+          <h3 class="mt-3 font-bold">Manutenzione</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-400">La teniamo viva, aggiornata e la facciamo crescere insieme alla tua azienda.</p>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <a href="#contatti" class="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-base font-semibold text-white transition-transform hover:scale-[1.02]">
+          Valutiamo insieme cosa automatizzare →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPERIENZA -->
+  <section id="esperienza" class="bg-white">
+    <div class="mx-auto max-w-6xl px-6 py-24">
+      <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+            Dal mainframe bancario alla Silicon Valley. Oggi, al servizio della tua impresa.
+          </h2>
+          <p class="mt-5 text-lg leading-relaxed text-slate-600">
+            iOStek è guidata da Marco De Girolamo, senior software engineer con oltre
+            trent'anni di esperienza internazionale. Ho progettato sistemi di
+            integrazione enterprise per multinazionali della Silicon Valley, sviluppato
+            mobile e backend per aziende in Italia, UK e Stati Uniti — e continuo a
+            farlo. Quella esperienza oggi è a disposizione della tua azienda.
+          </p>
+          <div class="mt-8 grid grid-cols-3 gap-4">
+            <div class="rounded-2xl bg-[#f6f8fb] p-5">
+              <div class="text-3xl font-extrabold text-accent font-sora">35+</div>
+              <div class="mt-1 text-sm font-medium text-slate-500">anni di esperienza</div>
+            </div>
+            <div class="rounded-2xl bg-[#f6f8fb] p-5">
+              <div class="text-3xl font-extrabold text-accent font-sora">IT·UK·US</div>
+              <div class="mt-1 text-sm font-medium text-slate-500">progetti internazionali</div>
+            </div>
+            <div class="rounded-2xl bg-[#f6f8fb] p-5">
+              <div class="text-3xl font-extrabold text-accent font-sora">20+</div>
+              <div class="mt-1 text-sm font-medium text-slate-500">dev coordinati su un progetto</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-5">
+          <div class="rounded-2xl border border-slate-100 p-6 ring-card">
+            <div class="text-xs font-semibold uppercase tracking-wider text-accent">2021 → oggi</div>
+            <div class="mt-1 font-bold">Mobile enterprise &amp; prodotti propri</div>
+            <p class="mt-1 text-sm leading-relaxed text-slate-600">App iOS enterprise per il mondo fashion internazionale (Kering, Luxottica, Safilo) e sviluppo di prodotti SaaS proprietari come Mandascan.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-100 p-6 ring-card">
+            <div class="text-xs font-semibold uppercase tracking-wider text-accent">2009 → 2021 · iOStek</div>
+            <div class="mt-1 font-bold">Software &amp; infrastrutture per Italia e UK</div>
+            <p class="mt-1 text-sm leading-relaxed text-slate-600">Mobile banking (Mobank), portali logistici (WnDirect), 100+ siti mobile (Mopowered) coordinando team internazionali; progettazione e gestione di infrastrutture IT in alta affidabilità.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-100 p-6 ring-card">
+            <div class="text-xs font-semibold uppercase tracking-wider text-accent">2000 → 2008 · Silicon Valley</div>
+            <div class="mt-1 font-bold">Integrazione enterprise (EAI/BPM)</div>
+            <p class="mt-1 text-sm leading-relaxed text-slate-600">Solution Engineer per Vitria, SeeBeyond (oggi Oracle) e MicroStrategy: architetture di integrazione e business intelligence per banche, telco e grandi gruppi (Fastweb, Telecom Italia, Alitalia, BancaIMI).</p>
+          </div>
+          <div class="rounded-2xl border border-slate-100 p-6 ring-card">
+            <div class="text-xs font-semibold uppercase tracking-wider text-accent">1989 → 2000</div>
+            <div class="mt-1 font-bold">Sistemi bancari mainframe</div>
+            <p class="mt-1 text-sm leading-relaxed text-slate-600">Lead developer su COBOL, CICS/DB2 per gruppi bancari (Banca di Roma, BNL, ICCREA): centrale rischi, estero, migrazioni di sistemi informativi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANDASCAN SHOWCASE -->
+  <section id="mandascan" class="bg-[#f6f8fb]">
+    <div class="mx-auto max-w-6xl px-6 py-24">
+      <p class="text-sm font-semibold uppercase tracking-wider text-accent">Prodotti</p>
+      <div class="mt-3 grid items-center gap-10 lg:grid-cols-2">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Non parliamo solo di software. Lo costruiamo.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-slate-600">
+            <strong>Mandascan</strong> è la nostra piattaforma per studi professionali:
+            raccoglie i documenti dei clienti a distanza, li fa firmare con valore legale
+            e li organizza in fascicoli cifrati. App iOS e Android più dashboard web,
+            con pagamenti, automazioni e infrastruttura self-hosted. La prova concreta
+            di cosa sappiamo mettere in produzione.
+          </p>
+          <a href="https://mandascan.com" rel="noopener" class="mt-7 inline-flex items-center gap-2 rounded-xl border border-accent/30 px-6 py-3.5 text-base font-semibold text-accent transition-colors hover:bg-accent/5">
+            Scopri Mandascan →
+          </a>
+        </div>
+        <div class="rounded-3xl bg-white p-8 ring-card">
+          <div class="space-y-4 text-sm text-slate-600">
+            <div class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"></span><span><strong class="text-ink">Full-stack reale:</strong> app mobile native, dashboard Next.js, backend, pagamenti e storage cifrato.</span></div>
+            <div class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"></span><span><strong class="text-ink">Infrastruttura self-hosted</strong> con sicurezza e continuità gestite end-to-end.</span></div>
+            <div class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"></span><span><strong class="text-ink">Automazioni</strong> che tolgono il lavoro ripetitivo agli studi — la stessa filosofia che portiamo nella tua azienda.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contatti" class="bg-ink text-white">
+    <div class="mx-auto max-w-4xl px-6 py-24 text-center">
+      <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Raccontaci cosa vuoi costruire o automatizzare.</h2>
+      <p class="mx-auto mt-4 max-w-xl text-lg text-slate-300">
+        Una chiamata, nessun impegno. Capiamo se possiamo aiutarti davvero e, se sì, come.
+      </p>
+      <div class="mt-9 flex flex-wrap justify-center gap-3">
+        <a href="mailto:marco@iostek.com?subject=Progetto%20per%20iOStek" class="rounded-xl bg-accent px-7 py-3.5 text-base font-semibold text-white shadow-[0_10px_30px_rgba(31,111,235,0.4)] transition-transform hover:scale-[1.02]">
+          Scrivici: marco@iostek.com
+        </a>
+        <a href="https://www.linkedin.com/in/mdegirolamo/" rel="noopener" class="rounded-xl border border-white/20 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink">
+    <div class="mx-auto max-w-6xl border-t border-white/10 px-6 py-10">
+      <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+        <div>
+          <div class="text-lg font-extrabold text-white font-sora">iOS<span class="text-accent2">tek</span></div>
+          <p class="mt-1 text-sm text-slate-400">Studio di consulenza software &amp; IT — di Marco De Girolamo</p>
+        </div>
+        <div class="text-sm text-slate-400">
+          <div>marco@iostek.com</div>
+          <div class="mt-1">P.IVA 10552601006</div>
+        </div>
+      </div>
+      <p class="mt-8 text-xs text-slate-500">© 2026 iOStek. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

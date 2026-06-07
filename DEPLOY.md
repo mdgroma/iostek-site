@@ -9,7 +9,7 @@ Push del progetto su un remote Git (GitHub) e collega il repo in Plesk (Git), op
 - Document root: la cartella del repo (dove sta `package.json`).
 - Abilita **Node.js**:
   - Application Root = cartella del repo
-  - Application Startup File: avvio Next in produzione. Imposta lo startup su `node_modules/next/dist/bin/next` con argomento `start`, **oppure** usa un `server.js` custom. (Su Plesk recenti basta impostare "Application Startup File" e il comando di avvio `npm start`.)
+  - **Application Startup File = `server.js`** (incluso nel repo: avvia Next in produzione su `PORT` di Plesk).
   - Node.js version: 20+ (il progetto gira con 20/22/25).
 
 ## 3. Variabili d'ambiente (Plesk → Node.js → Environment Variables)

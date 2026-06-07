@@ -9,14 +9,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: { extend: {
         fontFamily: {
-          display: ['"Space Grotesk"', 'sans-serif'],
+          display: ['"Inter Tight"', 'sans-serif'],
           sans: ['Manrope', 'sans-serif'],
-          mono: ['"JetBrains Mono"', 'monospace'],
+          mono: ['Manrope', 'sans-serif'],
         },
         colors: { ink: '#1A1813', paper: '#FBFAF6', accent: '#2A43E8', accent2: '#5E74FF' },
       }},
@@ -25,8 +25,8 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Manrope', sans-serif; background: #FBFAF6; }
-    h1,h2,h3,.font-display { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; }
-    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; }
+    h1,h2,h3,.font-display { font-family: 'Inter Tight', sans-serif; letter-spacing: -0.022em; }
+    .eyebrow { font-family: 'Manrope', sans-serif; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; }
     .ring-card { box-shadow: 0 1px 2px rgba(26,24,19,0.04), 0 18px 50px rgba(26,24,19,0.06); }
 
     .glow-paper { background-color:#FBFAF6; background-image:
@@ -77,12 +77,12 @@
   <!-- HERO -->
   <section id="top" class="glow-paper relative overflow-hidden">
     <div class="absolute inset-0 dotgrid"></div>
-    <div class="relative mx-auto grid max-w-6xl items-center gap-14 px-6 py-24 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
+    <div class="relative mx-auto grid max-w-6xl items-center gap-14 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
       <div>
         <p class="eyebrow inline-flex items-center gap-2 text-accent">
           <span class="h-1.5 w-1.5 rounded-full bg-accent"></span> Studio di consulenza software &amp; IT · dal 1989
         </p>
-        <h1 class="mt-6 text-[2.6rem] font-semibold leading-[1.04] tracking-tight sm:text-6xl lg:text-[3.9rem]">
+        <h1 class="mt-5 text-[2.4rem] font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.3rem]">
           Software su misura e <span class="text-accent">automazione AI</span> per la tua azienda.
         </h1>
         <p class="mt-7 max-w-xl text-lg leading-relaxed text-stone-600">
@@ -99,7 +99,7 @@
             Metti una tua AI in casa →
           </a>
         </div>
-        <p class="mt-8 eyebrow text-stone-400">35 anni · Italia · UK · Silicon Valley</p>
+        <p class="mt-8 eyebrow text-stone-500">35 anni · Italia · UK · Silicon Valley</p>
       </div>
 
       <!-- VIZ FUTURISTICO -->
@@ -173,7 +173,7 @@
   <!-- CREDIBILITY -->
   <section class="border-y border-ink/5 bg-white">
     <div class="mx-auto max-w-6xl px-6 py-10">
-      <p class="eyebrow text-stone-400">Esperienza maturata su progetti e piattaforme per</p>
+      <p class="eyebrow text-stone-500">Esperienza maturata su progetti e piattaforme per</p>
       <div class="mt-5 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-semibold text-stone-400">
         <span>Kering</span><span>Luxottica</span><span>Safilo</span><span>Gruppo Gucci</span>
         <span>Fastweb</span><span>BNL</span><span>Acqua Dolomia</span><span>Comet · Sime Vignuda</span>
@@ -184,7 +184,7 @@
 
   <!-- SERVIZI -->
   <section id="servizi" class="bg-paper">
-    <div class="mx-auto max-w-6xl px-6 py-24">
+    <div class="mx-auto max-w-6xl px-6 py-20">
       <p class="eyebrow text-accent">Servizi</p>
       <h2 class="mt-3 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
         Quattro cose che facciamo bene, da molto tempo.
@@ -196,10 +196,10 @@
 
       <div class="mt-12 grid gap-6 md:grid-cols-2">
         <div class="ring-card rounded-3xl border border-ink/5 bg-white p-8">
-          <span class="eyebrow text-stone-400">01</span>
+          <span class="eyebrow text-stone-500">01</span>
           <h3 class="mt-2 text-2xl font-semibold">Software su misura</h3>
           <p class="mt-2 leading-relaxed text-stone-600">App mobile iOS e Android (nativo e cross-platform), piattaforme SaaS, gestionali web e portali. Dalla progettazione dell'architettura al deployment in produzione.</p>
-          <p class="mt-4 eyebrow text-stone-400">Swift · SwiftUI · Flutter · Next.js · backend &amp; API</p>
+          <p class="mt-4 eyebrow text-stone-500">Swift · SwiftUI · Flutter · Next.js · backend &amp; API</p>
         </div>
 
         <div class="ring-card rounded-3xl border border-accent/20 bg-gradient-to-br from-accent/[0.05] to-white p-8">
@@ -210,17 +210,17 @@
         </div>
 
         <div class="ring-card rounded-3xl border border-ink/5 bg-white p-8">
-          <span class="eyebrow text-stone-400">03</span>
+          <span class="eyebrow text-stone-500">03</span>
           <h3 class="mt-2 text-2xl font-semibold">Infrastrutture IT</h3>
           <p class="mt-2 leading-relaxed text-stone-600">Progettazione, installazione, gestione e manutenzione. Cloud, ibrido o on-premise: alta affidabilità, failover, backup, sicurezza e continuità operativa. Le teniamo in piedi noi.</p>
-          <p class="mt-4 eyebrow text-stone-400">AWS · Azure · Hetzner · VMware · Linux · sicurezza</p>
+          <p class="mt-4 eyebrow text-stone-500">AWS · Azure · Hetzner · VMware · Linux · sicurezza</p>
         </div>
 
         <div class="ring-card rounded-3xl border border-ink/5 bg-white p-8">
-          <span class="eyebrow text-stone-400">04</span>
+          <span class="eyebrow text-stone-500">04</span>
           <h3 class="mt-2 text-2xl font-semibold">Integrazione enterprise</h3>
           <p class="mt-2 leading-relaxed text-stone-600">Far parlare i sistemi che oggi non si parlano: ERP, CRM, database, gateway di messaggistica. Oltre vent'anni su middleware di integrazione e processi enterprise, anche in ambito bancario.</p>
-          <p class="mt-4 eyebrow text-stone-400">EAI/BPM · ERP/CRM · SWIFT/FIN · ORACLE · DB2</p>
+          <p class="mt-4 eyebrow text-stone-500">EAI/BPM · ERP/CRM · SWIFT/FIN · ORACLE · DB2</p>
         </div>
       </div>
     </div>
@@ -229,7 +229,7 @@
   <!-- AI DEEP DIVE -->
   <section id="ai" class="ink-section relative overflow-hidden text-paper">
     <div class="absolute inset-0 dotgrid-light"></div>
-    <div class="relative mx-auto max-w-6xl px-6 py-24">
+    <div class="relative mx-auto max-w-6xl px-6 py-20">
       <p class="eyebrow text-accent2">Automazione AI</p>
       <h2 class="mt-3 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
         L'AI non è un chatbot da comprare. È un sistema da progettare <span class="text-accent2">intorno</span> alla tua azienda.
@@ -259,7 +259,7 @@
 
   <!-- ESPERIENZA -->
   <section id="esperienza" class="bg-paper">
-    <div class="mx-auto max-w-6xl px-6 py-24">
+    <div class="mx-auto max-w-6xl px-6 py-20">
       <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <div class="mb-6 flex items-center gap-4">
@@ -269,7 +269,7 @@
             </div>
             <div>
               <div class="font-semibold">Marco De Girolamo</div>
-              <div class="eyebrow text-stone-400">Founder · Senior Software Engineer</div>
+              <div class="eyebrow text-stone-500">Founder · Senior Software Engineer</div>
             </div>
           </div>
           <p class="eyebrow text-accent">Esperienza</p>
@@ -302,7 +302,7 @@
 
   <!-- MANDASCAN -->
   <section id="mandascan" class="bg-white">
-    <div class="mx-auto max-w-6xl px-6 py-24">
+    <div class="mx-auto max-w-6xl px-6 py-20">
       <p class="eyebrow text-accent">Prodotti</p>
       <div class="mt-3 grid items-center gap-12 lg:grid-cols-2">
         <div>
@@ -350,7 +350,7 @@
 
   <!-- CONTATTI -->
   <section id="contatti" class="bg-paper">
-    <div class="mx-auto max-w-5xl px-6 py-24">
+    <div class="mx-auto max-w-5xl px-6 py-20">
       <div class="overflow-hidden rounded-[2rem] ink-section relative text-paper">
         <div class="absolute inset-0 dotgrid-light"></div>
         <div class="relative px-8 py-16 text-center sm:px-16">

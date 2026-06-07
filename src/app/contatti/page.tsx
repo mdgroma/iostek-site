@@ -35,6 +35,7 @@ export default function ContattiPage() {
               <h3 className="font-semibold">Contatti diretti</h3>
               <div className="mt-4 space-y-3 text-sm">
                 <a href="mailto:marco@iostek.com" className="flex items-center gap-3 text-stone-700 hover:text-accent"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent/10 text-accent">@</span>marco@iostek.com</a>
+                <a href="https://wa.me/393801708583?text=Ciao,%20vorrei%20informazioni%20su%20iOStek." target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-stone-700 hover:text-accent"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#25D366]/15 text-[#1da851] text-xs font-bold">WA</span>WhatsApp · +39 380 170 8583</a>
                 <a href="https://www.linkedin.com/in/mdegirolamo/" rel="noopener" className="flex items-center gap-3 text-stone-700 hover:text-accent"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent/10 text-accent font-bold">in</span>linkedin.com/in/mdegirolamo</a>
               </div>
             </div>

@@ -74,9 +74,11 @@ export default function PrivacyPage() {
       <p>
         I dati possono essere trattati da fornitori che ci supportano in qualità di responsabili del
         trattamento: il provider di hosting (server in UE) e il provider di posta elettronica utilizzato
-        per recapitarci i messaggi del modulo. Il sito <strong>non</strong> carica risorse da CDN di terze
-        parti: i caratteri tipografici e gli stili sono serviti direttamente dal nostro dominio. Non
-        vendiamo né cediamo i tuoi dati a terzi per finalità di marketing.
+        per recapitarci i messaggi del modulo. Se ci contatti tramite <strong>WhatsApp</strong>, il
+        servizio è fornito da Meta Platforms Ireland Ltd.: la conversazione e i relativi metadati sono
+        trattati secondo l&apos;informativa di WhatsApp/Meta. Il sito <strong>non</strong> carica risorse da
+        CDN di terze parti: i caratteri tipografici e gli stili sono serviti direttamente dal nostro
+        dominio. Non vendiamo né cediamo i tuoi dati a terzi per finalità di marketing.
       </p>
 
       <h2>Trasferimenti extra-UE</h2>

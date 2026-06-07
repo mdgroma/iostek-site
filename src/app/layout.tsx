@@ -5,6 +5,7 @@ import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import CookieBanner from "./_components/CookieBanner";
 import RevealInit from "./_components/RevealInit";
+import WhatsAppFab from "./_components/WhatsAppFab";
 
 // Font self-hostati al build (nessuna richiesta a Google a runtime → GDPR pulito)
 const inter = Inter({
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <CookieBanner />
+        <WhatsAppFab />
         <RevealInit />
       </body>
     </html>

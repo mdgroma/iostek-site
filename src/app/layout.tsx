@@ -38,6 +38,14 @@ export const metadata: Metadata = {
     title: "iOStek — Software su misura e automazione AI per le aziende",
     description:
       "Studio di consulenza software e IT con focus sull'automazione AI: una tua AI in casa, sui tuoi dati.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "iOStek — Software su misura e automazione AI" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "iOStek — Software su misura e automazione AI per le aziende",
+    description:
+      "Studio di consulenza software e IT con focus sull'automazione AI: una tua AI in casa, sui tuoi dati.",
+    images: ["/og.png"],
   },
 };
 

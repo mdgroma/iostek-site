@@ -6,38 +6,38 @@
   <title>Cookie Policy — iOStek</title>
   <meta name="robots" content="noindex" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = { theme: { extend: {
-      fontFamily: { sora: ['Sora','sans-serif'], inter: ['Inter','sans-serif'] },
-      colors: { ink: '#0A1020', accent: '#1F6FEB', accent2: '#3B8DF0' },
+      fontFamily: { display: ['Fraunces','serif'], sans: ['Manrope','sans-serif'], mono: ['"JetBrains Mono"','monospace'] },
+      colors: { ink: '#1A1813', paper: '#FBFAF6', accent: '#2A43E8', accent2: '#5E74FF' },
     }}};
   </script>
   <style>
-    body { font-family: 'Inter', sans-serif; } h1,h2,h3,.font-sora { font-family: 'Sora', sans-serif; }
-    .prose h2 { font-size:1.25rem; font-weight:700; margin-top:2rem; margin-bottom:.5rem; }
-    .prose p, .prose li { color:#3f4a5e; line-height:1.65; }
+    body { font-family: 'Manrope', sans-serif; background:#FBFAF6; }
+    h1,h2,h3,.font-display { font-family: 'Fraunces', serif; letter-spacing:-0.01em; }
+    .prose h2 { font-size:1.3rem; font-weight:600; margin-top:2rem; margin-bottom:.5rem; font-family:'Fraunces',serif; }
+    .prose p, .prose li { color:#4a463d; line-height:1.7; }
     .prose ul { list-style: disc; padding-left:1.25rem; margin:.5rem 0; }
-    .prose a { color:#1F6FEB; text-decoration: underline; }
+    .prose a { color:#2A43E8; text-decoration: underline; }
     table { width:100%; border-collapse: collapse; margin-top:.75rem; font-size:.9rem; }
-    th, td { text-align:left; padding:.6rem .75rem; border-bottom:1px solid #eef1f6; vertical-align:top; }
-    th { color:#0A1020; font-weight:700; }
+    th, td { text-align:left; padding:.6rem .75rem; border-bottom:1px solid #ece8df; vertical-align:top; }
+    th { color:#1A1813; font-weight:600; }
   </style>
 </head>
-<body class="bg-white text-ink antialiased">
+<body class="text-ink antialiased">
 
-  <header class="border-b border-white/10 bg-ink">
+  <header class="border-b border-ink/5 bg-paper/80 backdrop-blur-lg">
     <div class="mx-auto flex h-16 max-w-4xl items-center justify-between px-6">
-      <a href="index.html" class="flex items-center gap-2 text-xl font-extrabold tracking-tight text-white font-sora">
-        <span>iOS<span class="text-accent2">tek</span></span><span class="h-1.5 w-1.5 rounded-full bg-accent2"></span>
-      </a>
-      <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-white">← Home</a>
+      <a href="index.html" class="text-xl font-bold tracking-tight font-display">iOStek<span class="text-accent">.</span></a>
+      <a href="index.html" class="text-sm font-medium text-stone-500 hover:text-ink">← Home</a>
     </div>
   </header>
 
   <main class="mx-auto max-w-3xl px-6 py-16 prose">
-    <h1 class="text-3xl font-extrabold tracking-tight">Cookie Policy</h1>
-    <p class="mt-2 text-sm text-slate-500">Ultimo aggiornamento: 7 giugno 2026</p>
+    <p class="eyebrow font-mono text-xs uppercase tracking-[0.22em] text-accent">Legale</p>
+    <h1 class="mt-2 text-4xl font-semibold tracking-tight">Cookie Policy</h1>
+    <p class="mt-2 text-sm text-stone-500">Ultimo aggiornamento: 7 giugno 2026</p>
 
     <p class="mt-6">I cookie e le tecnologie simili sono piccoli file o informazioni salvati sul tuo dispositivo. Possono essere "tecnici" (necessari al funzionamento) oppure "di profilazione" (per tracciare le tue attività a fini pubblicitari o statistici).</p>
 
@@ -66,14 +66,14 @@
     <p>Puoi rivedere la tua scelta in qualsiasi momento con il link <a href="#" onclick="return iostekCookieSettings()"><strong>Gestisci cookie</strong></a> presente nel footer, oppure cancellando i dati del sito dalle impostazioni del tuo browser.</p>
   </main>
 
-  <footer class="bg-ink">
-    <div class="mx-auto max-w-4xl border-t border-white/10 px-6 py-10 text-sm text-slate-400">
+  <footer class="bg-paper">
+    <div class="mx-auto max-w-4xl border-t border-ink/10 px-6 py-10 text-sm text-stone-500">
       <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
-        <a href="privacy.html" class="hover:text-white">Privacy</a>
-        <a href="cookie.html" class="hover:text-white">Cookie</a>
-        <a href="#" onclick="return iostekCookieSettings()" class="hover:text-white">Gestisci cookie</a>
+        <a href="privacy.html" class="hover:text-ink">Privacy</a>
+        <a href="cookie.html" class="hover:text-ink">Cookie</a>
+        <a href="#" onclick="return iostekCookieSettings()" class="hover:text-ink">Gestisci cookie</a>
       </div>
-      <p class="mt-5 text-xs text-slate-500">© 2026 iOStek — P.IVA 10552601006</p>
+      <p class="mt-5 text-xs text-stone-400">© 2026 iOStek — P.IVA 10552601006</p>
     </div>
   </footer>
 

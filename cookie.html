@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cookie Policy — iOStek</title>
+  <meta name="robots" content="noindex" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { sora: ['Sora','sans-serif'], inter: ['Inter','sans-serif'] },
+      colors: { ink: '#0A1020', accent: '#1F6FEB', accent2: '#3B8DF0' },
+    }}};
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; } h1,h2,h3,.font-sora { font-family: 'Sora', sans-serif; }
+    .prose h2 { font-size:1.25rem; font-weight:700; margin-top:2rem; margin-bottom:.5rem; }
+    .prose p, .prose li { color:#3f4a5e; line-height:1.65; }
+    .prose ul { list-style: disc; padding-left:1.25rem; margin:.5rem 0; }
+    .prose a { color:#1F6FEB; text-decoration: underline; }
+    table { width:100%; border-collapse: collapse; margin-top:.75rem; font-size:.9rem; }
+    th, td { text-align:left; padding:.6rem .75rem; border-bottom:1px solid #eef1f6; vertical-align:top; }
+    th { color:#0A1020; font-weight:700; }
+  </style>
+</head>
+<body class="bg-white text-ink antialiased">
+
+  <header class="border-b border-white/10 bg-ink">
+    <div class="mx-auto flex h-16 max-w-4xl items-center justify-between px-6">
+      <a href="index.html" class="flex items-center gap-2 text-xl font-extrabold tracking-tight text-white font-sora">
+        <span>iOS<span class="text-accent2">tek</span></span><span class="h-1.5 w-1.5 rounded-full bg-accent2"></span>
+      </a>
+      <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-white">← Home</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-6 py-16 prose">
+    <h1 class="text-3xl font-extrabold tracking-tight">Cookie Policy</h1>
+    <p class="mt-2 text-sm text-slate-500">Ultimo aggiornamento: 7 giugno 2026</p>
+
+    <p class="mt-6">I cookie e le tecnologie simili sono piccoli file o informazioni salvati sul tuo dispositivo. Possono essere "tecnici" (necessari al funzionamento) oppure "di profilazione" (per tracciare le tue attività a fini pubblicitari o statistici).</p>
+
+    <h2>Cosa usa questo sito</h2>
+    <p>Questo sito ha un approccio essenziale alla privacy: <strong>non utilizza cookie di profilazione né strumenti di tracciamento o statistiche</strong>. L'unico dato salvato sul tuo dispositivo è la tua scelta sull'informativa cookie, memorizzata nello <em>storage locale</em> del browser (non un cookie di tracciamento) per non riproporti il banner ad ogni visita.</p>
+
+    <table>
+      <thead><tr><th>Strumento</th><th>Tipo</th><th>Finalità</th><th>Durata</th></tr></thead>
+      <tbody>
+        <tr><td>iostek_cookie_consent</td><td>Tecnico (localStorage)</td><td>Memorizza la tua scelta sul banner cookie</td><td>Fino a cancellazione</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Risorse di terze parti</h2>
+    <p>Per essere veloce e leggero il sito carica alcune risorse da reti di distribuzione (CDN) esterne:</p>
+    <ul>
+      <li><strong>Google Fonts</strong> (fonts.googleapis.com, fonts.gstatic.com) — fornisce i caratteri tipografici.</li>
+      <li><strong>Tailwind CSS via CDN</strong> (jsDelivr/unpkg) — fornisce gli stili.</li>
+    </ul>
+    <p>Questi servizi non impostano cookie di profilazione tramite il nostro sito, ma per fornire le risorse possono ricevere il tuo indirizzo IP. Per i loro trattamenti vale anche la nostra <a href="privacy.html">Privacy Policy</a>. In futuro, per ridurre del tutto questi trasferimenti, queste risorse potranno essere servite direttamente dal nostro dominio.</p>
+
+    <h2>Statistiche e analytics</h2>
+    <p>Al momento <strong>non</strong> utilizziamo strumenti di statistica. Qualora venissero introdotti, saranno elencati in questa pagina e attivati solo previo tuo consenso tramite il banner.</p>
+
+    <h2>Come gestire le preferenze</h2>
+    <p>Puoi rivedere la tua scelta in qualsiasi momento con il link <a href="#" onclick="return iostekCookieSettings()"><strong>Gestisci cookie</strong></a> presente nel footer, oppure cancellando i dati del sito dalle impostazioni del tuo browser.</p>
+  </main>
+
+  <footer class="bg-ink">
+    <div class="mx-auto max-w-4xl border-t border-white/10 px-6 py-10 text-sm text-slate-400">
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
+        <a href="privacy.html" class="hover:text-white">Privacy</a>
+        <a href="cookie.html" class="hover:text-white">Cookie</a>
+        <a href="#" onclick="return iostekCookieSettings()" class="hover:text-white">Gestisci cookie</a>
+      </div>
+      <p class="mt-5 text-xs text-slate-500">© 2026 iOStek — P.IVA 10552601006</p>
+    </div>
+  </footer>
+
+  <script src="assets/cookie.js" defer></script>
+</body>
+</html>

@@ -155,7 +155,14 @@
         </div>
         <div class="text-sm text-slate-400"><div>marco@iostek.com</div><div class="mt-1">P.IVA 10552601006</div></div>
       </div>
-      <p class="mt-8 text-xs text-slate-500">© 2026 iOStek. Tutti i diritti riservati.</p>
+      <div class="mt-8 flex flex-col gap-3 border-t border-white/5 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div class="flex flex-wrap gap-x-5 gap-y-2 text-xs text-slate-400">
+          <a href="privacy.html" class="hover:text-white">Privacy</a>
+          <a href="cookie.html" class="hover:text-white">Cookie</a>
+          <a href="#" onclick="return iostekCookieSettings()" class="hover:text-white">Gestisci cookie</a>
+        </div>
+        <p class="text-xs text-slate-500">© 2026 iOStek. Tutti i diritti riservati.</p>
+      </div>
     </div>
   </footer>
 
@@ -163,5 +170,6 @@
     const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:0.12});
     document.querySelectorAll('section h2, .ring-card').forEach(el=>{el.classList.add('reveal');io.observe(el);});
   </script>
+  <script src="assets/cookie.js" defer></script>
 </body>
 </html>

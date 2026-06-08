@@ -191,10 +191,10 @@ export default function HomePage() {
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 1.6c0 1.1-.4 2.1-1.2 3-.85.95-1.95 1.5-3 1.4-.12-1.05.42-2.2 1.2-3 .82-.86 2-1.46 3-1.4zM20.3 17c-.5 1.18-.78 1.7-1.5 2.8-1 1.52-2.4 3.4-4.13 3.4-1.5 0-1.9-.98-4-.98-2.07 0-2.5.96-4 1-1.7.04-3-1.66-4-3.18C-.13 16.6-.42 11.4 2 8.7c1.1-1.3 2.6-2.1 4.1-2.1 1.7 0 2.8 1 4.2 1 1.36 0 2.2-1 4.2-1 1.3 0 2.7.7 3.7 2-3.24 1.78-2.72 6.4.1 7.4z"/></svg>
                   <span className="leading-tight text-left"><span className="block text-[10px] text-stone-300">Scarica su</span><span className="block text-sm font-semibold">App Store</span></span>
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=com.iostek.mandascan" rel="noopener" className="inline-flex items-center gap-2.5 rounded-xl bg-ink px-4 py-2.5 text-white transition-transform hover:scale-[1.03]" aria-label="Scarica Mandascan su Google Play">
+                <span className="inline-flex items-center gap-2.5 rounded-xl bg-ink px-4 py-2.5 text-white opacity-70" aria-label="Mandascan per Android — presto su Google Play">
                   <svg width="18" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D2FF" d="M3.7 2.3c-.4.2-.6.6-.6 1.1v17.2c0 .5.2.9.6 1.1L13.4 12z"/><path fill="#FFCE00" d="M16.9 8.8 13.4 12l3.5 3.2 3.9-2.2c.7-.4.7-1.6 0-2z"/><path fill="#FF3D00" d="M3.7 2.3 13.4 12l3.5-3.2L5.6 2c-.7-.4-1.4-.3-1.9.3z"/><path fill="#00C853" d="M3.7 21.7 13.4 12l3.5 3.2L5.6 22c-.7.4-1.4.3-1.9-.3z"/></svg>
-                  <span className="leading-tight text-left"><span className="block text-[10px] text-stone-300">Disponibile su</span><span className="block text-sm font-semibold">Google Play</span></span>
-                </a>
+                  <span className="leading-tight text-left"><span className="block text-[10px] text-stone-300">Presto su</span><span className="block text-sm font-semibold">Google Play</span></span>
+                </span>
               </div>
             </div>
             <div className="relative">

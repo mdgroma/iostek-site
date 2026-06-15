@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <main className="prose mx-auto max-w-3xl px-6 py-16">
-      <p className="eyebrow text-accent">Legale</p>
+      <p className="eyebrow text-accent-deep">Legale</p>
       <h1 className="mt-2 text-4xl font-bold tracking-tight">Privacy Policy</h1>
-      <p className="mt-2 text-sm text-stone-500">Ultimo aggiornamento: 7 giugno 2026</p>
+      <p className="mt-2 text-sm text-slate-500">Ultimo aggiornamento: 7 giugno 2026</p>
 
       <p className="mt-6">
         La presente informativa descrive come iOStek tratta i dati personali degli utenti che visitano
@@ -36,6 +36,13 @@ export default function PrivacyPage() {
         <li>
           <strong>Dati tecnici di navigazione:</strong> dati minimi raccolti automaticamente dai sistemi
           (es. indirizzo IP nei log del server) per la sicurezza e il funzionamento del sito.
+        </li>
+        <li>
+          <strong>Statistiche di utilizzo anonime:</strong> tramite <strong>Umami</strong>, uno
+          strumento di analytics senza cookie, raccogliamo dati aggregati e anonimi sull&apos;uso del
+          sito (pagine viste, provenienza generica, tipo di dispositivo). Non vengono salvati cookie né
+          identificatori e non è possibile risalire alla tua identità. Dettagli nella{" "}
+          <Link href="/cookie">Cookie Policy</Link>.
         </li>
       </ul>
       <p>Non raccogliamo categorie particolari di dati e non effettuiamo profilazione.</p>

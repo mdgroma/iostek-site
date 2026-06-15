@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #1a1813;
-  --color-paper: #fbfaf6;
-  --color-accent: #2a43e8;
-  --font-display: var(--font-inter-tight), sans-serif;
-  --font-sans: var(--font-inter), sans-serif;
+  --color-ink: #131922;
+  --color-ink2: #1b2430;
+  --color-paper: #eef1f4;
+  --color-accent: #0fb5ae;
+  --color-accent-deep: #0a7e78;
+  --color-accent2: #2bd4cd;
+  --font-display: var(--font-space-grotesk), sans-serif;
+  --font-sans: var(--font-ibm-plex-sans), sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), monospace;
 }
 
 html {
@@ -13,40 +17,40 @@ html {
 }
 body {
   background: var(--color-paper);
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-ibm-plex-sans), sans-serif;
   color: var(--color-ink);
 }
 h1, h2, h3, .font-display {
-  font-family: var(--font-inter-tight), sans-serif;
-  letter-spacing: -0.022em;
+  font-family: var(--font-space-grotesk), sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .eyebrow {
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-ibm-plex-mono), monospace;
   font-size: 12.5px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .ring-card {
-  box-shadow: 0 1px 2px rgba(26, 24, 19, 0.04), 0 18px 50px rgba(26, 24, 19, 0.06);
+  box-shadow: 0 1px 2px rgba(19, 25, 34, 0.05), 0 18px 50px rgba(19, 25, 34, 0.08);
 }
 
 .glow-paper {
-  background-color: #fbfaf6;
+  background-color: #eef1f4;
   background-image:
-    radial-gradient(46% 38% at 12% 4%, rgba(42, 67, 232, 0.1), transparent 70%),
-    radial-gradient(40% 40% at 96% 0%, rgba(94, 116, 255, 0.1), transparent 70%);
+    radial-gradient(46% 38% at 12% 4%, rgba(15, 181, 174, 0.12), transparent 70%),
+    radial-gradient(40% 40% at 96% 0%, rgba(43, 212, 205, 0.12), transparent 70%);
 }
 .ink-section {
-  background-color: #1a1813;
+  background-color: #131922;
   background-image:
-    radial-gradient(48% 40% at 14% 0%, rgba(94, 116, 255, 0.22), transparent 70%),
-    radial-gradient(42% 42% at 92% 12%, rgba(42, 67, 232, 0.2), transparent 70%);
+    radial-gradient(48% 40% at 14% 0%, rgba(43, 212, 205, 0.20), transparent 70%),
+    radial-gradient(42% 42% at 92% 12%, rgba(15, 181, 174, 0.20), transparent 70%);
 }
 .dotgrid {
-  background-image: radial-gradient(rgba(26, 24, 19, 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(19, 25, 34, 0.06) 1px, transparent 1px);
   background-size: 24px 24px;
   -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
   mask-image: linear-gradient(to bottom, black, transparent 92%);
@@ -79,21 +83,21 @@ h1, h2, h3, .font-display {
 .field {
   width: 100%;
   border-radius: 0.9rem;
-  border: 1px solid #e7e3da;
+  border: 1px solid #dce2e8;
   background: #fff;
   padding: 0.7rem 0.9rem;
   font-size: 0.95rem;
   outline: none;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
-.field:focus { border-color: #2a43e8; box-shadow: 0 0 0 4px rgba(42, 67, 232, 0.12); }
-.form-label { font-size: 0.8rem; font-weight: 600; color: #3f3b33; }
+.field:focus { border-color: #0fb5ae; box-shadow: 0 0 0 4px rgba(15, 181, 174, 0.16); }
+.form-label { font-size: 0.8rem; font-weight: 600; color: #1b2430; }
 
 /* Prose (privacy / cookie) */
-.prose h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.5rem; font-family: var(--font-inter-tight), sans-serif; letter-spacing: -0.022em; }
-.prose p, .prose li { color: #4a463d; line-height: 1.7; }
+.prose h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.5rem; font-family: var(--font-space-grotesk), sans-serif; letter-spacing: -0.02em; }
+.prose p, .prose li { color: #4a5566; line-height: 1.7; }
 .prose ul { list-style: disc; padding-left: 1.25rem; margin: 0.5rem 0; }
-.prose a { color: #2a43e8; text-decoration: underline; }
+.prose a { color: #0a7e78; text-decoration: underline; }
 .prose table { width: 100%; border-collapse: collapse; margin-top: 0.75rem; font-size: 0.9rem; }
-.prose th, .prose td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid #ece8df; vertical-align: top; }
-.prose th { color: #1a1813; font-weight: 700; }
+.prose th, .prose td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid #dce2e8; vertical-align: top; }
+.prose th { color: #131922; font-weight: 700; }

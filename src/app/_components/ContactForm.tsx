@@ -83,7 +83,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full rounded-full bg-accent px-6 py-3.5 text-base font-semibold text-white shadow-[0_12px_30px_rgba(42,67,232,0.3)] transition-transform hover:scale-[1.01] disabled:opacity-60"
+        className="w-full rounded-full bg-accent px-6 py-3.5 text-base font-semibold text-[#04211F] shadow-[0_12px_30px_rgba(15,181,174,0.3)] transition-transform hover:scale-[1.01] disabled:opacity-60"
       >
         {status === "sending" ? "Invio…" : "Invia richiesta"}
       </button>
@@ -93,7 +93,7 @@ export default function ContactForm() {
             ? "text-xs text-emerald-600"
             : status === "error"
               ? "text-xs text-rose-600"
-              : "text-xs text-stone-400"
+              : "text-xs text-slate-400"
         }
       >
         {note || "Inviando accetti di essere ricontattato in merito alla tua richiesta."}

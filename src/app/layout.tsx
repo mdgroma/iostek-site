@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight } from "next/font/google";
+import { Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
@@ -8,17 +9,29 @@ import RevealInit from "./_components/RevealInit";
 import WhatsAppFab from "./_components/WhatsAppFab";
 
 // Font self-hostati al build (nessuna richiesta a Google a runtime → GDPR pulito)
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-space-grotesk",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
-const interTight = Inter_Tight({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-inter-tight",
-  weight: ["600", "700", "800"],
+  variable: "--font-ibm-plex-sans",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--font-ibm-plex-mono",
+  weight: ["400", "500"],
+  display: "swap",
+});
+
+// Umami — analytics cookieless e anonimo. Si attiva solo se le env sono valorizzate
+// (NEXT_PUBLIC_UMAMI_SRC + NEXT_PUBLIC_UMAMI_WEBSITE_ID).
+const umamiSrc = process.env.NEXT_PUBLIC_UMAMI_SRC;
+const umamiWebsiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID;
 
 const siteUrl = "https://iostek.com";
 
@@ -52,7 +65,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="it" className={`${inter.variable} ${interTight.variable}`}>
+    <html
+      lang="it"
+      className={`${spaceGrotesk.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
+    >
       <body className="antialiased">
         <Header />
         {children}
@@ -60,6 +76,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CookieBanner />
         <WhatsAppFab />
         <RevealInit />
+        {umamiSrc && umamiWebsiteId && (
+          <Script
+            src={umamiSrc}
+            data-website-id={umamiWebsiteId}
+            strategy="afterInteractive"
+            defer
+          />
+        )}
       </body>
     </html>
   );

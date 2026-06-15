@@ -28,10 +28,13 @@ const ibmPlexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-// Umami — analytics cookieless e anonimo. Si attiva solo se le env sono valorizzate
-// (NEXT_PUBLIC_UMAMI_SRC + NEXT_PUBLIC_UMAMI_WEBSITE_ID).
-const umamiSrc = process.env.NEXT_PUBLIC_UMAMI_SRC;
-const umamiWebsiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID;
+// Umami — analytics cookieless e anonimo. Il Website ID e lo script non sono dati
+// segreti (compaiono comunque nell'HTML), quindi sono hardcoded come default: così
+// il tracciamento funziona anche senza variabili d'ambiente sul server. Restano
+// sovrascrivibili via NEXT_PUBLIC_UMAMI_SRC / NEXT_PUBLIC_UMAMI_WEBSITE_ID.
+const umamiSrc = process.env.NEXT_PUBLIC_UMAMI_SRC ?? "https://cloud.umami.is/script.js";
+const umamiWebsiteId =
+  process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID ?? "aeb30469-4c51-4a6f-be06-486445d2aefd";
 
 const siteUrl = "https://iostek.com";
 
@@ -76,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CookieBanner />
         <WhatsAppFab />
         <RevealInit />
-        {umamiSrc && umamiWebsiteId && (
+        {process.env.NODE_ENV === "production" && umamiSrc && umamiWebsiteId && (
           <Script
             src={umamiSrc}
             data-website-id={umamiWebsiteId}

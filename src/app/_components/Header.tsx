@@ -14,13 +14,15 @@ const NAV = [
 
 export default function Header() {
   const path = usePathname();
+  // Le landing di campagna (es. /bando-ai-fvg) hanno una loro intestazione dedicata.
+  if (path.startsWith("/bando")) return null;
   return (
     <header className="sticky top-0 z-50 border-b border-ink/5 bg-paper/80 backdrop-blur-lg">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link href="/" aria-label="iOStek — home">
           <Logo />
         </Link>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-stone-500 md:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium text-slate-500 md:flex">
           {NAV.map((i) => {
             const active = i.href.startsWith("/") && !i.href.includes("#") && path === i.href;
             return (

@@ -1,26 +1,31 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 
 export default function Footer() {
+  const path = usePathname();
+  // Le landing di campagna (es. /bando-ai-fvg) hanno un loro footer con disclaimer dedicato.
+  if (path.startsWith("/bando")) return null;
   return (
     <footer className="bg-paper">
       <div className="mx-auto max-w-6xl border-t border-ink/10 px-6 py-12">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
             <Logo size={24} textClass="text-lg" />
-            <p className="mt-2 text-sm text-stone-500">
+            <p className="mt-2 text-sm text-slate-500">
               Studio di consulenza software &amp; IT — di Marco De Girolamo
             </p>
           </div>
-          <div className="text-sm text-stone-500">
+          <div className="text-sm text-slate-500">
             <div>marco@iostek.com</div>
             <div className="mt-1">P.IVA 10552601006</div>
           </div>
         </div>
         <div className="mt-10 flex flex-col gap-3 border-t border-ink/5 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-stone-500">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-500">
+            <Link href="/bando-ai-fvg" className="font-semibold text-accent-deep hover:text-ink">Bando IA FVG 2026</Link>
             <Link href="/privacy" className="hover:text-ink">Privacy</Link>
             <Link href="/cookie" className="hover:text-ink">Cookie</Link>
             <button
@@ -31,7 +36,7 @@ export default function Footer() {
               Gestisci cookie
             </button>
           </div>
-          <p className="text-xs text-stone-400">© 2026 iOStek. Tutti i diritti riservati.</p>
+          <p className="text-xs text-slate-400">© 2026 iOStek. Tutti i diritti riservati.</p>
         </div>
       </div>
     </footer>

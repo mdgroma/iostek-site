@@ -44,14 +44,14 @@ export default function CookieBanner() {
       className="fixed inset-x-4 bottom-4 z-[9999] mx-auto max-w-xl rounded-2xl border border-white/12 bg-ink p-5 text-paper shadow-[0_24px_60px_rgba(8,15,35,0.45)]"
     >
       <div className="text-[15px] font-semibold">Cookie e privacy</div>
-      <p className="mt-1.5 text-[13px] leading-relaxed text-stone-300">
+      <p className="mt-1.5 text-[13px] leading-relaxed text-slate-300">
         Questo sito usa solo strumenti tecnici necessari al funzionamento e{" "}
         <strong>non</strong> usa cookie di profilazione o di tracciamento. Dettagli nella{" "}
-        <Link href="/cookie" className="text-[#5E74FF] underline">
+        <Link href="/cookie" className="text-[#2BD4CD] underline">
           Cookie Policy
         </Link>{" "}
         e nella{" "}
-        <Link href="/privacy" className="text-[#5E74FF] underline">
+        <Link href="/privacy" className="text-[#2BD4CD] underline">
           Privacy Policy
         </Link>
         .
@@ -60,7 +60,7 @@ export default function CookieBanner() {
         <button
           type="button"
           onClick={() => choose(true)}
-          className="min-w-[130px] flex-1 rounded-xl bg-accent px-3.5 py-2.5 text-sm font-semibold text-white"
+          className="min-w-[130px] flex-1 rounded-xl bg-accent px-3.5 py-2.5 text-sm font-semibold text-[#04211F]"
         >
           Accetta
         </button>

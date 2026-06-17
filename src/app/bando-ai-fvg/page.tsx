@@ -17,7 +17,14 @@ export const metadata: Metadata = {
     title: "AI su misura per la tua azienda, con il bando IA FVG 2026",
     description:
       "Fino al 75% a fondo perduto (max 10.000€) per software IA, consulenza e formazione. Una tua AI in casa, sui tuoi dati.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "iOStek — Bando IA FVG 2026" }],
+    images: [{ url: "/og-bando.png", width: 2400, height: 1260, alt: "Bando IA FVG 2026 — 75% a fondo perduto per la tua AI aziendale" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI su misura per la tua azienda, con il bando IA FVG 2026",
+    description:
+      "Fino al 75% a fondo perduto (max 10.000€) per software IA, consulenza e formazione. Una tua AI in casa, sui tuoi dati.",
+    images: ["/og-bando.png"],
   },
 };
 

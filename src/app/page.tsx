@@ -165,11 +165,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* MANDASCAN */}
-      <section id="mandascan" className="bg-white">
+      {/* PRODOTTI: MANDASCAN E SYMBIONT */}
+      <section id="prodotti" className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <p className="eyebrow text-accent-deep">Prodotti</p>
-          <div className="mt-3 grid items-center gap-12 lg:grid-cols-2">
+          <div id="mandascan" className="mt-3 grid scroll-mt-24 items-center gap-12 lg:grid-cols-2">
             <div>
               <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">Non parliamo solo di software. Lo costruiamo.</h2>
               <p className="mt-5 text-lg leading-relaxed text-slate-600">
@@ -208,6 +208,47 @@ export default function HomePage() {
                 <img src="/mandascan-dashboard.png" alt="Dashboard di Mandascan Studio" className="w-full" loading="lazy" />
               </div>
               <img src="/mandascan-mobile.png" alt="App Mandascan su iPhone" className="absolute -bottom-6 -left-5 hidden w-28 rounded-[1.6rem] ring-1 ring-ink/10 shadow-[0_20px_50px_rgba(26,24,19,0.22)] sm:block" loading="lazy" />
+            </div>
+          </div>
+
+          {/* SYMBIONT */}
+          <div id="symbiont" className="mt-24 grid scroll-mt-24 items-center gap-12 lg:grid-cols-2">
+            <div className="relative lg:order-1">
+              <div className="overflow-hidden rounded-3xl bg-[#1c1c1e] ring-card border border-ink/5">
+                <div className="flex items-center gap-1.5 border-b border-white/10 px-4 py-3">
+                  <span className="h-2.5 w-2.5 rounded-full bg-rose-300"></span>
+                  <span className="h-2.5 w-2.5 rounded-full bg-amber-300"></span>
+                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-300"></span>
+                  <span className="ml-3 text-xs text-slate-400 font-mono">getsymbiont.com</span>
+                </div>
+                <img src="/symbiont-app.webp" alt="L'applicazione Symbiont: la mappa di un sistema con i suoi componenti e i collegamenti" className="w-full" loading="lazy" />
+              </div>
+            </div>
+            <div className="lg:order-2">
+              <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">I sistemi sviluppati con l&apos;AI, documentati e recuperabili.</h2>
+              <p className="mt-5 text-lg leading-relaxed text-slate-600">
+                <strong className="font-semibold">Symbiont</strong>{" "}è la nostra applicazione per le software house
+                che sviluppano con l&apos;intelligenza artificiale. Documenta ogni sistema mentre viene sviluppato,
+                custodisce le chiavi di accesso in un archivio cifrato e garantisce la continuità del servizio
+                anche quando chi lo ha realizzato non è disponibile.
+              </p>
+              <div className="mt-6 space-y-3 text-sm text-slate-600">
+                <div className="flex items-start gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span><span><strong className="font-semibold text-ink">Applicazione per Mac, Windows e Linux:</strong> la mappa di ogni sistema si aggiorna in tempo reale mentre l&apos;assistente di programmazione lavora.</span></div>
+                <div className="flex items-start gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span><span><strong className="font-semibold text-ink">Accessi sotto controllo:</strong> chiavi condivise con conferma, registro e revoca, e un sostituto di fiducia confermato dal cliente.</span></div>
+                <div className="flex items-start gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span><span><strong className="font-semibold text-ink">Per l&apos;azienda cliente:</strong> una pagina web con i propri sistemi e il diritto alle chiavi d&apos;emergenza.</span></div>
+              </div>
+              <div className="mt-7 flex flex-wrap items-center gap-3">
+                <a href="https://getsymbiont.com/it/" rel="noopener" className="inline-flex items-center gap-2 rounded-full border border-accent/30 px-6 py-3.5 text-base font-semibold text-accent-deep transition-colors hover:bg-accent/5">
+                  Scopri Symbiont →
+                </a>
+                <a href="https://getsymbiont.com/it/scarica.html" rel="noopener" className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-base font-semibold text-white transition-transform hover:scale-[1.03]">
+                  Download
+                </a>
+              </div>
+              <p className="mt-4 text-sm text-slate-500">
+                Per le aziende che affidano il proprio software a un fornitore esterno:{" "}
+                <a href="https://getsymbiont.com/it/per-le-aziende.html" rel="noopener" className="font-medium text-accent-deep underline-offset-4 hover:underline">che cosa chiedere a chi sviluppa il vostro software</a>.
+              </p>
             </div>
           </div>
         </div>

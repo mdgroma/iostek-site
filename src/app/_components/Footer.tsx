@@ -26,6 +26,8 @@ export default function Footer() {
         <div className="mt-10 flex flex-col gap-3 border-t border-ink/5 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-500">
             <Link href="/bando-ai-fvg" className="font-semibold text-accent-deep hover:text-ink">Bando IA FVG 2026</Link>
+            <a href="https://mandascan.com" rel="noopener" className="hover:text-ink">Mandascan</a>
+            <a href="https://getsymbiont.com/it/" rel="noopener" className="hover:text-ink">Symbiont</a>
             <Link href="/privacy" className="hover:text-ink">Privacy</Link>
             <Link href="/cookie" className="hover:text-ink">Cookie</Link>
             <button
